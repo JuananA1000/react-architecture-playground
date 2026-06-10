@@ -1,4 +1,8 @@
 import { Routes, Route, Link } from 'react-router-dom';
+import { MVCPage } from './playground/mvc/MVCPage.jsx';
+import { CleanPage } from './playground/clean/CleanPage.jsx';
+import { FSDPage } from './playground/fsd/FSDPage.jsx';
+import { ModularPage } from './playground/modular/ModularPage.jsx';
 
 import './App.css';
 
@@ -19,10 +23,10 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path='/mvc' element={<>MVCPage</>} />
-        <Route path='/clean' element={<>CleanPage</>} />
-        <Route path='/fsd' element={<>FSDPage</>} />
-        <Route path='/modular' element={<>ModularPage</>} />
+        <Route path='/mvc' element={<MVCPage/>} />
+        <Route path='/clean' element={<CleanPage/>} />
+        <Route path='/fsd' element={<FSDPage/>} />
+        <Route path='/modular' element={<ModularPage/>} />
       </Routes>
     </section>
   );
