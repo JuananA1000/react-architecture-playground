@@ -3,6 +3,8 @@ import { MVCPage } from './playground/mvc/MVCPage.jsx';
 import { CleanPage } from './playground/clean/CleanPage.jsx';
 import { FSDPage } from './playground/fsd/FSDPage.jsx';
 import { ModularPage } from './playground/modular/ModularPage.jsx';
+import { MicrofrontendsPage } from './playground/microfrontends/MicrofrontendsPage.jsx';
+import { HexagonalPage } from './playground/hexagonal/HexagonalPage.jsx';
 
 import './App.css';
 
@@ -19,7 +21,7 @@ function App() {
 
       <nav>
         <Link to='/mvc'>MVC</Link> |<Link to='/clean'>Clean</Link> |<Link to='/fsd'>FSD</Link> |
-        <Link to='/modular'>Modular</Link>
+        <Link to='/modular'>Modular</Link> | <Link to='/microfrontends'>Microfrontends</Link> | <Link to='/hexagonal'>Hexagonal</Link>
       </nav>
 
       <Routes>
@@ -27,6 +29,8 @@ function App() {
         <Route path='/clean' element={<CleanPage/>} />
         <Route path='/fsd' element={<FSDPage/>} />
         <Route path='/modular' element={<ModularPage/>} />
+        <Route path='/microfrontends' element={<MicrofrontendsPage/>} />
+        <Route path='/hexagonal' element={<HexagonalPage/>} />
       </Routes>
     </section>
   );
