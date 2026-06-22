@@ -26,7 +26,7 @@ La idea es implementar la misma funcionalidad utilizando diferentes arquitectura
 
 ## 1. MVC (Model - View - Controller)
 
-### ¿Qué es?
+### 1.1. ¿Qué es?
 
 MVC separa la aplicación en tres responsabilidades:
 
@@ -34,7 +34,7 @@ MVC separa la aplicación en tres responsabilidades:
 - View: interfaz de usuario.
 - Controller: lógica de negocio y coordinación.
 
-### Flujo
+### 1.2. Flujo
 
 Usuario
 ↓
@@ -44,18 +44,18 @@ Controller
 ↓
 Model
 
-### Ventajas
+### 1.3. Ventajas
 
 - Fácil de entender.
 - Ideal para aprender separación de responsabilidades.
 - Poco código.
 
-### Inconvenientes
+### 1.4. Inconvenientes
 
 - Escala mal en aplicaciones grandes.
 - El Controller puede convertirse en un punto central excesivamente complejo.
 
-### Estructura
+### 1.5. Estructura de carpetas
 
 ```bash
     mvc/
@@ -77,7 +77,7 @@ Model
 
 ## 2. Modular Monolith
 
-### ¿Qué es?
+### 2.1. ¿Qué es?
 
 Organiza la aplicación por dominios o módulos.
 
@@ -88,24 +88,24 @@ Cada módulo contiene todo lo necesario para funcionar:
 - Servicios
 - Estado
 
-### Ejemplo
+### 2.2. Ejemplo
 
 - books
 - authors
 - categories
 
-### Ventajas
+### 2.3. Ventajas
 
 - Muy utilizado en aplicaciones empresariales.
 - Fácil de escalar.
 - Buena separación entre dominios.
 
-### Inconvenientes
+### 2.4. Inconvenientes
 
 - No fuerza separación estricta de dependencias.
 - Puede degenerar en una estructura caótica si no se controla.
 
-### Estructura
+### 2.5. Estructura de carpetas
 
 ```bash
 modular/
@@ -126,13 +126,11 @@ modular/
 │
 └── shared/
 ```
-[PEGAR ESQUEMA MODULAR AQUÍ]
-
 ---
 
 ## 3. Hexagonal Architecture
 
-### ¿Qué es?
+### 3.1. ¿Qué es?
 
 También conocida como:
 
@@ -140,7 +138,7 @@ También conocida como:
 
 El objetivo es aislar completamente el dominio de la infraestructura.
 
-### Conceptos principales
+### 3.2. Conceptos principales
 
 Dominio
 ↓
@@ -148,7 +146,7 @@ Puertos
 ↓
 Adaptadores
 
-### Adaptadores
+### 3.3. Adaptadores
 
 Primary Adapters
 
@@ -162,17 +160,17 @@ Secondary Adapters
 - Bases de datos
 - LocalStorage
 
-### Ventajas
+### 3.4. Ventajas
 
 - Dominio independiente.
 - Muy fácil sustituir infraestructura.
 
-### Inconvenientes
+### 3.5. Inconvenientes
 
 - Más compleja.
 - Puede parecer excesiva en proyectos pequeños.
 
-### Estructura
+### 3.6. Estructura de carpetas
 
 ```bash
 hexagonal/
@@ -205,7 +203,7 @@ hexagonal/
 
 ## 4. Clean Architecture
 
-### ¿Qué es?
+### 4.1. ¿Qué es?
 
 Arquitectura propuesta por Robert C. Martin (Uncle Bob).
 
@@ -213,7 +211,7 @@ Su principio fundamental:
 
 Las dependencias siempre apuntan hacia el dominio.
 
-### Capas
+### 4.2. Capas
 
 Presentation
 ↓
@@ -223,7 +221,7 @@ Domain
 ↑
 Infrastructure
 
-### Conceptos principales
+### 4.3. Conceptos principales
 
 Entities
 
@@ -237,18 +235,18 @@ Repositories
 
 Abstracciones para acceder a datos.
 
-### Ventajas
+### 4.4. Ventajas
 
 - Muy mantenible.
 - Muy testeable.
 - Excelente para aplicaciones complejas.
 
-### Inconvenientes
+### 4.5. Inconvenientes
 
 - Bastante código.
 - Curva de aprendizaje elevada.
 
-### Estructura
+### 4.6. Estructura de carpetas
 
 ```bash
 clean/
@@ -273,7 +271,7 @@ clean/
 
 ## 5. Feature-Sliced Design (FSD)
 
-### ¿Qué es?
+### 5.1. ¿Qué es?
 
 Arquitectura moderna diseñada específicamente para frontend.
 
@@ -281,7 +279,7 @@ No organiza por capas.
 
 Organiza por responsabilidad funcional.
 
-### Capas principales
+### 5.2. Capas principales
 
 app
 pages
@@ -290,7 +288,7 @@ features
 entities
 shared
 
-### Conceptos
+### 5.3. Conceptos
 
 Entities
 
@@ -308,17 +306,17 @@ Pages
 
 Páginas completas.
 
-### Ventajas
+### 5.4. Ventajas
 
 - Excelente escalabilidad.
 - Muy popular actualmente en React.
 
-### Inconvenientes
+### 5.5. Inconvenientes
 
 - Requiere disciplina.
 - Puede parecer compleja al principio.
 
-### Estructura
+### 5.6. Estructura de carpetas
 
 ```bash
 fsd/
@@ -344,35 +342,37 @@ fsd/
 
 ## 6. Microfrontends
 
-### ¿Qué es?
+### 6.1. ¿Qué es?
 
 Arquitectura donde una aplicación se divide en múltiples aplicaciones frontend independientes.
 
 Cada equipo puede desarrollar y desplegar su propio frontend.
 
-### Ejemplo
+### 6.2. Ejemplo
 
+```bash
 Shell
 ├── Books App
 ├── Authors App
 └── Categories App
+```
 
-### Objetivo
+### 6.3. Objetivo
 
 Escalabilidad organizacional.
 
-### Ventajas
+### 6.4. Ventajas
 
 - Equipos independientes.
 - Despliegues independientes.
 - Gran escalabilidad.
 
-### Inconvenientes
+### 6.5. Inconvenientes
 
 - Complejidad elevada.
 - Comunicación entre aplicaciones.
 
-### Estructura
+### 6.6. Estructura
 
 ```bash
 microfrontends/
