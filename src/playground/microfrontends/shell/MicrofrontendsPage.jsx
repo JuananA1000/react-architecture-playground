@@ -21,9 +21,9 @@ export const MicrofrontendsPage = () => {
     <div>
       <h2>Microfrontends</h2>
 
-      <BookSearch searchTerm={searchTerm} onSearch={setSearchTerm} />
       <BookForm onAddBook={handleAnnadirLibro} />
       <BookList libros={displayedBooks} onDelete={handleBorrarLibro} />
+      <BookSearch searchTerm={searchTerm} onSearch={setSearchTerm} />
     </div>
   );
 };
