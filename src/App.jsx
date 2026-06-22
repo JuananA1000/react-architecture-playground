@@ -3,7 +3,7 @@ import { MVCPage } from './playground/mvc/MVCPage.jsx';
 import { CleanPage } from './playground/clean/CleanPage.jsx';
 import { FSDPage } from './playground/fsd/FSDPage.jsx';
 import { ModularPage } from './playground/modular/ModularPage.jsx';
-import { MicrofrontendsPage } from './playground/microfrontends/MicrofrontendsPage.jsx';
+import { MicrofrontendsPage } from './playground/microfrontends/shell/MicrofrontendsPage.jsx';
 import { HexagonalPage } from './playground/hexagonal/HexagonalPage.jsx';
 
 import './App.css';
