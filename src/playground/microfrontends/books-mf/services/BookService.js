@@ -1,10 +1,11 @@
 export const BookService = {
-  annadirLibro(libros, titulo) {
+  annadirLibro(libros, { titulo, autor }) {
     return [
       ...libros,
       {
         id: Date.now(),
         title: titulo,
+        author: autor,
       },
     ];
   },

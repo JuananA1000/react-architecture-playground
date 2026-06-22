@@ -6,7 +6,7 @@ export default function BookList({ libros, onDelete }) {
       <ul>
         {libros.map((libro) => (
           <li key={libro.id}>
-            {libro.titulo} de {libro.autor}
+            {libro.title} de {libro.author}
             <button onClick={() => onDelete(libro.id)}>Borrar Libro</button>
           </li>
         ))}

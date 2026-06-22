@@ -9,8 +9,8 @@ export const MicrofrontendsPage = () => {
 
   const displayedBooks = searchTerm.trim() ? BookService.buscarLibro(libros, searchTerm) : libros;
   
-  const handleAnnadirLibro = (titulo) => {
-    setLibros( BookService.annadirLibro(libros, titulo));
+  const handleAnnadirLibro = ({ titulo, autor }) => {
+    setLibros(BookService.annadirLibro(libros, { titulo, autor }));
   };
 
   const handleBorrarLibro = (id) => {
@@ -21,9 +21,9 @@ export const MicrofrontendsPage = () => {
     <div>
       <h2>Microfrontends</h2>
 
-      <BookSearch searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
-      <BookForm onAnnadirLibro={handleAnnadirLibro} />
-      <BookList libros={displayedBooks} onBorrarLibro={handleBorrarLibro} />
+      <BookSearch searchTerm={searchTerm} onSearch={setSearchTerm} />
+      <BookForm onAddBook={handleAnnadirLibro} />
+      <BookList libros={displayedBooks} onDelete={handleBorrarLibro} />
     </div>
   );
 };
