@@ -4,8 +4,8 @@ export const BookService = {
       ...libros,
       {
         id: Date.now(),
-        title: titulo,
-        author: autor,
+        titulo,
+        autor,
       },
     ];
   },
@@ -15,6 +15,6 @@ export const BookService = {
   },
 
   buscarLibro(libros, term) {
-    return libros.filter((libro) => libro.title.toLowerCase().includes(term.toLowerCase()));
+    return libros.filter((libro) => libro.titulo.toLowerCase().includes(term.toLowerCase()));
   },
 };

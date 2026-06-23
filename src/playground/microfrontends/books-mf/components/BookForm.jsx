@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-const BookForm = ({ onAddBook }) => {
+const BookForm = ({  alAgregarLibro }) => {
   const [titulo, setTitulo] = useState('');
   const [autor, setAutor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddBook({ titulo, autor });
+    alAgregarLibro({ titulo, autor });
     setTitulo('');
     setAutor('');
   };
