@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-export default function BookList( { books, onDelete } ) {
+export default function BookList({ libros, alBorrar }) {
   return (
-    <div>
+    <>
       <h3>Todos los Libros</h3>
       <ul>
-        {books.map(book => (
-          <li key={book.id}>
-            {book.title} de {book.author}
-            <button onClick={() => onDelete(book.id)}>Borrar Libro</button>
+        {libros.map((libro) => (
+          <li key={libro.id}>
+            {libro.titulo} de {libro.autor} ({libro.anno}) - {libro.genero}
+            <button onClick={() => alBorrar(libro.id)}>Borrar Libro</button>
           </li>
         ))}
       </ul>
-    </div>
-  )
+    </>
+  );
 }

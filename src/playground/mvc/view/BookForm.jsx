@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-export default function BookForm({ onAddBook }) {
+export default function BookForm({ alAgregarLibro }) {
   const [titulo, setTitulo] = useState('');
   const [autor, setAutor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddBook({ titulo, autor });
+    alAgregarLibro({ titulo, autor });
     setTitulo('');
     setAutor('');
   };
