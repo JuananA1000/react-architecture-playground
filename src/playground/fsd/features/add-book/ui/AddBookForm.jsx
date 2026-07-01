@@ -40,27 +40,24 @@ export default function AddBookForm({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} aria-label='add-book-form'>
-      <div>
-        <label>
-          Título
-          <input name='title' value={form.title} onChange={handleChange} />
-        </label>
-      </div>
-      <div>
-        <label>
-          Autor
-          <input name='author' value={form.author} onChange={handleChange} />
-        </label>
-      </div>
-      <div>
-        <label>
-          Año
-          <input name='year' value={form.year} onChange={handleChange} placeholder='YYYY' />
-        </label>
-      </div>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <button type='submit'>Agregar libro</button>
-    </form>
+    <div>
+      <h2>Añadir Libro</h2>
+      <form onSubmit={handleSubmit} aria-label='add-book-form'>
+        <div>
+          <label>
+            Título
+            <input name='title' value={form.title} onChange={handleChange} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Autor
+            <input name='author' value={form.author} onChange={handleChange} />
+          </label>
+        </div>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+        <button type='submit'>Agregar libro</button>
+      </form>
+    </div>
   );
 }
