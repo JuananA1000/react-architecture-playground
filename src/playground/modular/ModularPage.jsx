@@ -5,10 +5,10 @@ export const ModularPage = () => {
   return (
     <div>
       <h2>Modular Monolith</h2>
-      <BookSearch  />
 
       <BookForm  />
       {/* <BookList /> */}
+      <BookSearch  />
 
     </div>
   );
