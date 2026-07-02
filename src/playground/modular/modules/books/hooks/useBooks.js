@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
-import { books } from '../data/books';
+import { books as initialBooks } from '../data/books';
 import { bookService } from '../services/bookService';
 
 export const useBooks = () => {
-  const [books, setBooks] = useState(books);
+  const [books, setBooks] = useState(initialBooks);
   const [searchTerm, setSearchTerm] = useState('');
 
   const displayedBooks = searchTerm.trim() ? bookService.searchBooks(books, searchTerm) : books;
 
   const addBook = (titulo) => {
-    setBooks(bookService.addBook(books, titulo));
+    setBooks((prevBooks) => bookService.addBook(prevBooks, titulo));
   };
 
   const deleteBook = (id) => {
-    setBooks(bookService.deleteBook(books, id));
+    setBooks((prevBooks) => bookService.deleteBook(prevBooks, id));
   };
 
   return {
