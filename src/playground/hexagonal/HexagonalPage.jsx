@@ -30,9 +30,9 @@ export const HexagonalPage = () => {
   return (
     <div>
       <h2>Hexagonal</h2>
-      <BookSearch searchTerm={searchTerm} alBuscar={handleSearch} />
       <BookForm alAgregarLibro={handleAddBook} />
       <BookList books={books} onDelete={deleteBook} />
+      <BookSearch searchTerm={searchTerm} alBuscar={handleSearch} />
     </div>
   );
 };
