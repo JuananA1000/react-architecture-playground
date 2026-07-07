@@ -1,8 +1,10 @@
+import './BookSearch.css';
+
 export default function BookSearch({ searchTerm, alBuscar }) {
   return (
-    <>
-      <h3>Buscar Libros</h3>
+    <div className='book-search'>
+      <h4>Buscar Libros</h4>
       <input type='text' placeholder='Buscar libros...' value={searchTerm} onChange={(e) => alBuscar(e.target.value)} />
-    </>
+    </div>
   );
 }

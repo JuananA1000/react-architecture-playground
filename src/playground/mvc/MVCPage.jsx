@@ -10,7 +10,7 @@ export const MVCPage = () => {
       <h2>Modelo Vista-Controlador</h2>
       <BookForm alAgregarLibro={(libro) => console.log('Libro añadido:', libro)} />
       <BookList libros={libros} alBorrar={() => {}} />
-      <BookSearch searchTerm='' alBuscar={() => {}} />
+      {/* <BookSearch searchTerm='' alBuscar={() => {}} /> */}
     </div>
   );
 };

@@ -1,9 +1,10 @@
-import React from 'react';
+import BookSearch from "./BookSearch";
 
 export default function BookList({ libros, alBorrar }) {
   return (
     <>
       <h3>Todos los Libros</h3>
+      <BookSearch searchTerm='' alBuscar={() => {}} />
       <ul>
         {libros.map((libro) => (
           <li key={libro.id}>
